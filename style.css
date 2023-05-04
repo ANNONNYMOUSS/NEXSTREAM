@@ -1,0 +1,106 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+html{scroll-behavior: smooth;}
+body{background: #f9f9f9; min-height: 100vh; overflow-x: hidden;}
+
+::-webkit-scrollbar{width: auto;} ::-webkit-scrollbar-track{background: cyan;} 
+::-webkit-scrollbar-thumb{background: #0c111b;}
+
+header{position: fixed; top: 0; left: 0; width: 100%; padding: 30px 100px; display: flex; justify-content: flex-start;
+align-items: center; z-index: 100;}
+
+.search-box{position: relative; max-width: 500px; width: 50%; height: 35px; display: flex; margin-left: auto;}
+.search-box input:focus ~ label,
+.search-box input:focus ~ label{transform: translateY(-20px);}
+.search-box label{position: absolute; bottom: 10px; color: gray; pointer-events: none;
+transition: all 0.3s ease; left: 20px;}
+.search-bar{width: 85%; height: 100%; border: none; padding: 0 20px; font-size: 16px; color: rgb(4, 114, 114);
+outline: none; background: transparent; box-shadow: 0px 1px white;}
+.search-bar.search-bar:focus{box-shadow: 0px 1px cyan;}
+.search-btn{width: 15%; height: 100%; background: transparent; border: none; padding: 5px 0; outline: none;}
+.search-btn img{height: 100%}
+
+.search-btn:hover{transform: scale(1.1);}
+
+.navigation a{text-decoration: none; color: #359381; padding: 6px 15px; border-top-left-radius: 20px; 
+margin: 0 10px; font-weight: 600; border-bottom-left-radius: 20px;}
+.navigation a:hover{background: linear-gradient(to right, #030b17 80%, #0c111b00); color: #fff;}
+.parallax{position: relative; display: flex; justify-content: center; align-items: center;
+height: 100vh; overflow: hidden;} 
+
+
+#text{position: absolute; font-size: 5em; color: #fff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);}
+
+.parallax img{position: absolute; top: 0; left: 0; width: 100%; pointer-events: none;} 
+.sec{position: relative; background: #0c111b;
+overflow: hidden;}
+
+.carousel-container{position: relative; width: 100%; height: 450px; padding: 20px 0;
+    margin-top: 80px;}
+
+    .carousel{display: flex; width: 92%; height: 100%; position: relative; margin: auto;
+        animation: scroll 300s linear infinite;}
+
+        .carousel:hover{animation-play-state: paused;}
+
+    .slider{flex: 0 0 auto; margin-right: 30px; position: relative; background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px; width: 100%; height: 100%; left: 0; transition: 1s; overflow: hidden;
+box-shadow: 0px 0px 20px cyan;}
+
+.slider:hover{transform: scale(1.03); box-shadow: 0px 0px 30px cyan;} 
+    .slider img{display: block; margin-left: auto; object-fit: cover; max-width: 80%; min-height: 100%;}
+    .slide-content{position: absolute; width: 50%; height: 100%; z-index: 2; 
+        background: linear-gradient(to right, #030b17 80%, #0c111b00); color: #fff;}
+    .movie-title{padding-left: 50px; text-transform: capitalize; margin-top: 80px;}
+    .movie-des{width: 80%; line-height: 30px; padding-left: 50px; margin-top: 30px; opacity: 0.8;}
+
+    @keyframes scroll{0%{transform: translateX(100%*50);} 100%{transform: translateX(calc(-100%*50));}}
+
+
+ .title{color: #fff; opacity: 0.7; padding-left: 4%; width: 40%; overflow: hidden;
+        text-transform: uppercase; font-size: 30px; font-weight: 500;} .movies-list{width: 100%; height: 220px;
+        position: relative; margin: 10px 0 20px;} .card-container{position: flex; width: 92%; 
+        padding-left: 10px; height: 220px; display: flex; margin: 0 auto; align-items: center; overflow-x: auto;
+        overflow-y: visible; scroll-behavior: smooth;} .card-container::-webkit-scrollbar{display: none;} 
+        .card{position: relative; min-width: 200px; width: 200px; height: 200px; border-radius: 5px; overflow: hidden;
+        margin-right: 10px; transition: .5s; background: #000; box-shadow: 0px 0px 5px cyan;} 
+        .card-img{width: 100%; height: 100%; object-fit: cover;}
+        .card:hover{transform: scale(1.03); box-shadow: 0px 0px 10px cyan;} .card:hover .card-body{opacity: 1;}
+        .card-body{height: 100%; width: 100%; position: absolute; top: 0; left: 0; z-index: 2; opacity: 0;
+            background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%); padding: 10px; 
+            overflow: hidden; transition: 0.5s;}
+        .name{color: #fff; font-size: 15px; font-weight: 500; text-transform: capitalize; margin-top: 60%;
+        overflow-x: hidden;}
+        .des{color: #fff; opacity: 0.8; margin: 15px 0; font-weight: 500; font-size: 12px; overflow-x: hidden;}
+        
+        .pre-btn, .nxt-btn{position: absolute; width: 5%; top: 0; height: 100%; z-index: 2; border: none;
+        outline: none; cursor: pointer;} .pre-btn{left: 0; background: linear-gradient(to right, #0c111b 0%, #0c111b00);}
+        .nxt-btn{right: 0; background: linear-gradient(to left, #0c111b 0%, #0c111b00);}
+        .pre-btn img, .nxt-btn img{height: 20px; width: 15px; opacity: 0;}
+        .pre-btn:hover img, .nxt-btn:hover img{opacity: 1;}
+        
+.frameContainer{width: 100%; padding: 20px 0; margin-top: 80px; display: flex; 
+margin: auto; overflow: hidden; background-image: url("images/NEXSTREAM.jpeg");
+background-size: auto; background-repeat: no-repeat; 
+background-position: left; box-shadow: 0px 0px 20px cyan;}
+
+
+.frame{margin-left: 5%; margin-right: 5%;}
+
+.comments{width: 40%; height: 370px; overflow-y: visible; animation: scrolll 30s linear infinite; 
+    position: relative; object-fit: contain;}
+    .comments:hover{animation-play-state: paused;} 
+.comm::-webkit-scrollbar{display: none;} 
+.comm{background: rgba(0, 0, 0, 0.5); box-shadow: 0px 0px 20px cyan;
+    border-radius: 5px; width: 100%; left: 0; transition: 1s; padding: 20px 20px 20px 20px;
+margin-top: 40px;}
+.comm:hover{transform: scale(1.1); box-shadow: 0px 0px 30px cyan;}
+    .comm-content{width: 75%; height: 50%; background: linear-gradient(to right, #030b17 80%, #0c111b00); color: #fff;
+    margin-bottom: 20px;}
+.comm-content img{float: left; margin-right: 20px;}    
+.comm-title{text-transform: capitalize; line-height: 40px; display: block; margin-left: auto; overflow: hidden;}
+.comm-des{width: 100%; line-height: 15px; opacity: 0.8; color: aquamarine;
+margin-top: 20px;}
+
+@keyframes scrolll {0%{transform: translateY(5%*50);} 100%{transform: translateY(calc(-5%*50));}}
+
+.frame iframe{box-shadow: 0px 0px 20px cyan;}
